@@ -6,13 +6,13 @@ class AnalysesController < ApplicationController
   end
 
   def show
-    @analysis = Analyses.find(params[:id])
+    @analysis = Analyses.find(params[:user_id])
 
     render json: @analysis
   end
 
   def create
-    @analysis = Analysis.create(name: params[:name], dream_id: params[:dream_id], content: params[:content]
+    @analysis = Analysis.create(name: params[:name], dream_id: params[:dream_id], content: params[:content])
 
     render json: @dream
   end

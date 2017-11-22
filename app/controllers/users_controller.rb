@@ -11,9 +11,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_id: params[:user_id], name: params[:name]
+    @user = User.create(user_id: params[:user_id], name: params[:name])
 
-    render json: @definition
+    render json: @user
   end
 
   def update
