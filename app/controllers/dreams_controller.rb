@@ -7,12 +7,11 @@ class DreamsController < ApplicationController
 
   def show
     @dream = Dream.find(params[:id])
-
-    render json: @dream
+	render json: @dream
   end
 
   def create
-    @dream = Dream.create(name: params[:name], dream_id: params[:dream_id], content: params[:content]
+    @dream = Dream.create(name: params[:name], id: params[:id], content: params[:content])
 
     render json: @dream
   end
