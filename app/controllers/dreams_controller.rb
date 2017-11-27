@@ -1,8 +1,8 @@
 class DreamsController < ApplicationController
 
     def index
-	    @dreams = User.all
-	    render json: @users
+	    @dreams = Dream.all
+	    render json: @dreams
   	end
 
   def show

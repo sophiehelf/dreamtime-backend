@@ -23,7 +23,7 @@ dream_list = [
 ]
 
 dream_list.each do |dream, content|
-	Dream.create!(name: dream, content: content)
+	Dream.create(name: dream, content: content)
 end
 
 analyses_list = [
