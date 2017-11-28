@@ -17,15 +17,17 @@ class DreamsController < ApplicationController
   end
 
   def update
-    @dream = Dream.find(params[:dream_id])
+    @dream = Dream.find(params[:id])
     @dream.save
 
     render json: @dream
   end
 
   def destroy
-    @dream = Dream.find(params[:dream_id])
+    @dream = Dream.find(params[:id])
     @dream.destroy
+
+    render json: @dream
   end
 
   private
